@@ -143,7 +143,9 @@ from sklearn.pipeline import Pipeline
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, classification_report
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.naive_bayes import GaussianNB
+from sklearn.neural_network import MLPClassifier
 ```
 
 Expected output:
@@ -438,10 +440,13 @@ Use `gender_binary` instead of the original text `gender` column.
 3. Split data into training and testing sets.
 4. Use `stratify=y` if the class balance is uneven.
 5. Build at least one baseline model.
-6. Build at least two simple machine learning models.
-7. Compare model performance.
-8. Show confusion matrix for the best model.
-9. Write a short interpretation of results.
+6. Build all suitable classification models from the allowed course list.
+7. Compare model performance before tuning.
+8. Select the most suitable model based on performance and explainability.
+9. Tune the selected model's hyperparameters.
+10. Evaluate the tuned model.
+11. Show confusion matrix for the final selected model.
+12. Write a short interpretation of results.
 
 Recommended split:
 
@@ -451,14 +456,42 @@ Recommended split:
 random_state=42
 ```
 
-Recommended models:
+Allowed course models:
 
-| Model | Why Use It |
+| Model | Use for This Project? | Notes |
+|---|---|---|
+| Majority class baseline | Yes, as a benchmark | Not from the course list, but useful as a simple comparison point. |
+| Logistic regression | Yes | Best simple starting model for binary `addicted_label`. |
+| Decision tree | Yes | Easy to explain and allowed by the course list. |
+| Naive Bayes | Yes | Simple classification model. Can be compared with logistic regression and decision tree. |
+| KNN | Yes | Allowed, but scale numeric features before using it. |
+| Neural network | Optional | Allowed, but use only if time permits because it is harder to explain. |
+| Linear regression | Not recommended for main target | `addicted_label` is classification, not a continuous numeric target. Use only if the instructor specifically asks for a regression comparison. |
+| Regression | Not recommended for main target | Use only for a separate numeric prediction question, such as predicting `daily_screen_time_hours`. |
+
+Recommended model comparison workflow for Person 4:
+
+1. Build a majority class baseline first.
+2. Train all suitable allowed classification models:
+   - Logistic regression.
+   - Decision tree.
+   - Naive Bayes.
+   - KNN.
+   - Neural network, if time permits.
+3. Compare their first-pass performance using the same train/test split.
+4. Choose the most suitable model based on performance, interpretability, and assignment requirements.
+5. Tune only the selected model, instead of tuning every model.
+6. Report both before-tuning and after-tuning performance for the selected model.
+
+Simple hyperparameter tuning examples:
+
+| Model | Hyperparameters to Try |
 |---|---|
-| Majority class baseline | Shows the minimum benchmark. |
-| Logistic regression | Simple and interpretable. |
-| Decision tree | Easy to understand. |
-| Random forest | Stronger tree-based comparison. |
+| Logistic regression | `C`, `max_iter`, solver if needed. |
+| Decision tree | `max_depth`, `min_samples_split`, `min_samples_leaf`, criterion. |
+| Naive Bayes | `var_smoothing`. |
+| KNN | `n_neighbors`, `weights`, distance metric. |
+| Neural network | hidden layer size, activation, learning rate, `max_iter`. |
 
 ### Recommended Metrics
 
