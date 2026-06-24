@@ -1,0 +1,9 @@
+metric,value,display_value,note
+Rows analyzed,7500.0,"7,500",Full source CSV after corrected loading.
+Addicted-label share,70.77,70.77%,Share of rows where addicted_label = 1.
+Average daily screen time,7.5,7.50h,Mean daily_screen_time_hours.
+Average social media hours,3.27,3.27h,Mean social_media_hours.
+Component sum exceeds daily screen time,60.71,60.71%,Rows where social + gaming + work/study exceeds daily screen time.
+Day load exceeds 24 hours,2.08,2.08%,Rows where sleep + screen time + work/study exceeds 24 hours.
+Final model accuracy,93.53,93.53%,Recommended tuned decision tree from Analysis.ipynb.
+Final model F1 score,95.48,95.48%,Positive-class F1 from Analysis.ipynb.

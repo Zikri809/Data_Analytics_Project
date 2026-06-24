@@ -1,0 +1,11 @@
+feature,importance
+daily_screen_time_hours,0.5712
+social_media_hours,0.4253
+sleep_hours,0.0034
+age,0.0
+gaming_hours,0.0
+work_study_hours,0.0
+notifications_per_day,0.0
+app_opens_per_day,0.0
+weekend_screen_time,0.0
+low_sleep_flag,0.0

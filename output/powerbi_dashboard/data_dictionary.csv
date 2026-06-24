@@ -1,0 +1,11 @@
+field,description
+addicted_label,"Binary target from source data; 1 means addicted label, 0 means not addicted label."
+addiction_level_display,"Original severity category; None is a real category, not missing data."
+addiction_status,Dashboard-friendly label derived from addicted_label.
+age_group,"Age binned as 18-22, 23-27, and 28-35."
+screen_time_band,Daily screen time grouped for filtering and comparison.
+usage_component_total_hours,social_media_hours + gaming_hours + work_study_hours.
+component_sum_exceeds_daily_screen_time,True when component hours exceed daily_screen_time_hours.
+day_load_exceeds_24_hours,True when sleep + daily screen time + work/study exceeds 24 hours.
+weekend_to_daily_screen_time_ratio,weekend_screen_time divided by daily_screen_time_hours.
+low_sleep_flag,True when sleep_hours is below 7.

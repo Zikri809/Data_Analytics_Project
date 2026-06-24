@@ -1,0 +1,4 @@
+age_group,rows,addicted_rate,avg_daily_screen_time_hours,avg_weekend_screen_time,avg_social_media_hours,avg_sleep_hours
+18-22,2078,70.16,7.5,9.23,3.25,6.75
+23-27,2057,71.22,7.45,9.2,3.3,6.76
+28-35,3365,70.88,7.53,9.28,3.27,6.72

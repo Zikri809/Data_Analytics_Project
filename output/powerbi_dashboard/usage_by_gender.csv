@@ -1,0 +1,4 @@
+gender,rows,addicted_rate,avg_daily_screen_time_hours,avg_weekend_screen_time,avg_social_media_hours,avg_sleep_hours
+Female,2461,70.22,7.45,9.19,3.26,6.75
+Male,2553,72.23,7.56,9.32,3.3,6.79
+Other,2486,69.83,7.49,9.23,3.26,6.67

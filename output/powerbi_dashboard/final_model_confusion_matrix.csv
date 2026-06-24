@@ -1,0 +1,5 @@
+actual,predicted,count
+0 - Not addicted label,0 - Not addicted label,379
+0 - Not addicted label,1 - Addicted label,59
+1 - Addicted label,0 - Not addicted label,38
+1 - Addicted label,1 - Addicted label,1024

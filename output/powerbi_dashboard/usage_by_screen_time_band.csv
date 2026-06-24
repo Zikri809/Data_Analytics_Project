@@ -1,0 +1,5 @@
+screen_time_band,rows,addicted_rate,avg_daily_screen_time_hours,avg_weekend_screen_time,avg_social_media_hours,avg_sleep_hours
+10h+,1715,100.0,10.97,12.72,3.31,6.82
+6-8h,1616,65.47,7.03,8.77,3.29,6.7
+8-10h,1629,100.0,8.99,10.74,3.28,6.71
+Up to 6h,2540,35.67,4.5,6.23,3.24,6.72

@@ -1,0 +1,46 @@
+{
+  "name": "Smartphone Usage Rubric Dashboard",
+  "dataColors": [
+    "#2563EB",
+    "#14B8A6",
+    "#F59E0B",
+    "#EF4444",
+    "#64748B",
+    "#8B5CF6",
+    "#22C55E",
+    "#0F172A"
+  ],
+  "background": "#F8FAFC",
+  "foreground": "#0F172A",
+  "tableAccent": "#2563EB",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "title": [
+          {
+            "fontColor": { "solid": { "color": "#0F172A" } },
+            "fontSize": 11
+          }
+        ],
+        "visualHeader": [
+          {
+            "show": true
+          }
+        ],
+        "background": [
+          {
+            "color": { "solid": { "color": "#FFFFFF" } },
+            "transparency": 0
+          }
+        ],
+        "border": [
+          {
+            "show": true,
+            "color": { "solid": { "color": "#E2E8F0" } },
+            "radius": 4
+          }
+        ]
+      }
+    }
+  }
+}

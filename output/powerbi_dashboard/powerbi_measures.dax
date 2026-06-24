@@ -1,0 +1,62 @@
+Rows Analyzed =
+COUNTROWS('smartphone_usage_powerbi_model')
+
+Addicted Label Rows =
+CALCULATE(
+    [Rows Analyzed],
+    'smartphone_usage_powerbi_model'[addicted_label] = 1
+)
+
+Addicted Label Share =
+DIVIDE([Addicted Label Rows], [Rows Analyzed])
+
+Average Daily Screen Time =
+AVERAGE('smartphone_usage_powerbi_model'[daily_screen_time_hours])
+
+Average Weekend Screen Time =
+AVERAGE('smartphone_usage_powerbi_model'[weekend_screen_time])
+
+Average Social Media Hours =
+AVERAGE('smartphone_usage_powerbi_model'[social_media_hours])
+
+Average Sleep Hours =
+AVERAGE('smartphone_usage_powerbi_model'[sleep_hours])
+
+Low Sleep Share =
+DIVIDE(
+    CALCULATE(
+        [Rows Analyzed],
+        'smartphone_usage_powerbi_model'[low_sleep_flag] = TRUE()
+    ),
+    [Rows Analyzed]
+)
+
+Component Sum Issue Share =
+DIVIDE(
+    CALCULATE(
+        [Rows Analyzed],
+        'smartphone_usage_powerbi_model'[component_sum_exceeds_daily_screen_time] = TRUE()
+    ),
+    [Rows Analyzed]
+)
+
+Day Load Over 24h Share =
+DIVIDE(
+    CALCULATE(
+        [Rows Analyzed],
+        'smartphone_usage_powerbi_model'[day_load_exceeds_24_hours] = TRUE()
+    ),
+    [Rows Analyzed]
+)
+
+Final Model Accuracy =
+0.9353
+
+Final Model F1 Score =
+0.9548
+
+Final Model Macro F1 =
+0.9207
+
+Final Model Balanced Accuracy =
+0.9148

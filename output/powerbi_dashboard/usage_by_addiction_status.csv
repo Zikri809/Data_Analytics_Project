@@ -1,0 +1,3 @@
+addiction_status,rows,addicted_rate,avg_daily_screen_time_hours,avg_weekend_screen_time,avg_social_media_hours,avg_gaming_hours,avg_work_study_hours,avg_sleep_hours,avg_notifications_per_day,avg_app_opens_per_day
+0 - Not addicted label,2192,0.0,5.16,6.89,2.25,2.0,3.24,6.67,134.33,97.0
+1 - Addicted label,5308,100.0,8.47,10.21,3.7,2.02,3.24,6.77,134.23,98.18
